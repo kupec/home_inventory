@@ -4,6 +4,8 @@ from jinja2 import Environment, PackageLoader, select_autoescape
 from starlette.responses import HTMLResponse
 app = FastAPI()
 
+# only used in development. For production one should use nginx for that url
+# one problem with that middleware it is an unconfigurable cache-control header
 app.mount("/inventory/static", StaticFiles(directory="static"), name="static")
 
 env = Environment(
