@@ -1,0 +1,5 @@
+<form id="form" (submit)="upload($event)">
+    <input type="file" accept="image/jpeg,image/png" (change)="onFileChange($event)" />
+    <input type="submit" />
+</form>
+<img id="image" src="{{ imageSrc() }}" alt="" class="img" />
